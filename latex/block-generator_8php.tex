@@ -1,0 +1,31 @@
+\hypertarget{block-generator_8php}{}\section{c\+:/wamp/www/framework/block-\/generator.php File Reference}
+\label{block-generator_8php}\index{c\+:/wamp/www/framework/block-\/generator.\+php@{c\+:/wamp/www/framework/block-\/generator.\+php}}
+
+
+Call this script to generate a new block.  
+
+
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$name} = trim(str\+\_\+replace(\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textquotesingle{}, fgets(S\+T\+D\+IN)))\hypertarget{block-generator_8php_ab2fc40d43824ea3e1ce5d86dee0d763b}{}\label{block-generator_8php_ab2fc40d43824ea3e1ce5d86dee0d763b}
+
+\item 
+if(mkdir(\+\_\+\+\_\+\+D\+I\+R\+\_\+\+\_\+. \textquotesingle{}/src/\textquotesingle{}.\$name, 0774, true)) {\bfseries else}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Call this script to generate a new block. 
+
+Use \char`\"{}php block-\/generator.\+php\char`\"{} to start the block creation. You will have to provide a name for it, which should be camel\+Cased and ended by \char`\"{}\+Block\char`\"{}. It will create a directory in the /src, containing an empty controller and a routing.\+yml file, used in the same way as the global one /config/routing.yml. 
+
+\subsection{Variable Documentation}
+\index{block-\/generator.\+php@{block-\/generator.\+php}!else@{else}}
+\index{else@{else}!block-\/generator.\+php@{block-\/generator.\+php}}
+\subsubsection[{\texorpdfstring{else}{else}}]{\setlength{\rightskip}{0pt plus 5cm}if (mkdir(\+\_\+\+\_\+\+D\+I\+R\+\_\+\+\_\+. \textquotesingle{}/src/\textquotesingle{}.\$name, 0774, true)) else}\hypertarget{block-generator_8php_a7328c1fe04d3275b552985d51b4aa3cd}{}\label{block-generator_8php_a7328c1fe04d3275b552985d51b4aa3cd}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    echo \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nThis block already exists."}
+\end{DoxyCode}

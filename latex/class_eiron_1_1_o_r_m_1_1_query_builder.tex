@@ -1,0 +1,223 @@
+\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder}{}\section{Eiron\textbackslash{}O\+RM\textbackslash{}Query\+Builder Class Reference}
+\label{class_eiron_1_1_o_r_m_1_1_query_builder}\index{Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder@{Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_a645141629fc019777b639484a7c87e52}{select\+From} (\$entity)
+\begin{DoxyCompactList}\small\item\em A basic way to select all the rows from a table. \end{DoxyCompactList}\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_af16b3d263aedfcc26a7793cfc4a77d9a}{delete\+From} (\$entity)
+\begin{DoxyCompactList}\small\item\em A basic way to delete some rows from a table. \end{DoxyCompactList}\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_a377df83c0a416273528739f5b3bb839b}{count\+From} (\$entity)
+\begin{DoxyCompactList}\small\item\em A basic way to count all the rows from a table. \end{DoxyCompactList}\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_a2e1577915ea45bbf42572f7bba0b20f4}{where} (\$expr)
+\begin{DoxyCompactList}\small\item\em A \char`\"{}where\char`\"{} function, with the condition as parameter. \end{DoxyCompactList}\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_ad75c121d7c9458f3c9d54b2967179060}{and\+Where} (\$expr)
+\begin{DoxyCompactList}\small\item\em Adds a second \char`\"{}where\char`\"{} using an A\+ND operator, with the condition as parameter. \end{DoxyCompactList}\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_a90c6e6969ef52a27880a40486d1c9d3b}{or\+Where} (\$expr)
+\begin{DoxyCompactList}\small\item\em Adds a second \char`\"{}where\char`\"{} using an OR operator, with the condition as parameter. \end{DoxyCompactList}\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_a00f8f2b1018bc1f3f449e34abe1d12a4}{inner\+Join} (\$entity)
+\begin{DoxyCompactList}\small\item\em Adds an inner join to your query between \$this-\/$>$entity, and the \$entity parameter of this method. \end{DoxyCompactList}\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_acbaa126594294ef160748e1bdf9aa74b}{left\+Join} (\$entity)
+\begin{DoxyCompactList}\small\item\em Adds a left join to your query between \$this-\/$>$entity, and the \$entity parameter of this method. \end{DoxyCompactList}\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_a791b13a237e96ea44655edc7f602faa1}{right\+Join} (\$entity)
+\begin{DoxyCompactList}\small\item\em Adds a right join to your query between \$this-\/$>$entity, and the \$entity parameter of this method. \end{DoxyCompactList}\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_afda91cfd3a428392f444082b4a14cd88}{on} (\$expr)
+\begin{DoxyCompactList}\small\item\em Specify the fields used in a join. \end{DoxyCompactList}\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_a68517a42061ced70872c6de90c2dcd3f}{order\+By} (\$column, \$asc=true)
+\begin{DoxyCompactList}\small\item\em Orders the rows returned by your query. \end{DoxyCompactList}\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_a3cd93d792e7e3d58d41e81c1d2ec740f}{limit} (\$limit, \$offset=null)
+\begin{DoxyCompactList}\small\item\em Limits the number of rows returned. \end{DoxyCompactList}\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_a235fcd7a0a4a9b5d9c2e0c7cd67a692d}{generate\+Query} ()
+\begin{DoxyCompactList}\small\item\em Generates the query. \end{DoxyCompactList}\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_ade8025723f568435b1da29de2eb2acaa}{set\+Query} (\$query)
+\begin{DoxyCompactList}\small\item\em Sets a My\+S\+QL query. \end{DoxyCompactList}\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_a619795b0add32f39d067ea7aab3575f2}{get\+Query} (\$query)
+\begin{DoxyCompactList}\small\item\em Returns the query. \end{DoxyCompactList}\item 
+\hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_aca8acdbf7b61cbf3e46eda0a986237a6}{exec\+Query} ()
+\begin{DoxyCompactList}\small\item\em Executes the query. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!and\+Where@{and\+Where}}
+\index{and\+Where@{and\+Where}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{and\+Where(\$expr)}{andWhere($expr)}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::and\+Where (
+\begin{DoxyParamCaption}
+\item[{}]{\$expr}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_ad75c121d7c9458f3c9d54b2967179060}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_ad75c121d7c9458f3c9d54b2967179060}
+
+
+Adds a second \char`\"{}where\char`\"{} using an A\+ND operator, with the condition as parameter. 
+
+This method adds \char`\"{}\+A\+N\+D \$expr\char`\"{} to the query. Use it to specify a second or more filter to your query. Alternatively, you can use the \hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_a90c6e6969ef52a27880a40486d1c9d3b}{or\+Where()} method. \index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!count\+From@{count\+From}}
+\index{count\+From@{count\+From}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{count\+From(\$entity)}{countFrom($entity)}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::count\+From (
+\begin{DoxyParamCaption}
+\item[{}]{\$entity}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_a377df83c0a416273528739f5b3bb839b}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_a377df83c0a416273528739f5b3bb839b}
+
+
+A basic way to count all the rows from a table. 
+
+This method adds \char`\"{}\+S\+E\+L\+E\+C\+T C\+O\+U\+N\+T($\ast$) F\+R\+O\+M \$table\char`\"{} to the query. Use the following methods to filter the result, and execute the query. \index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!delete\+From@{delete\+From}}
+\index{delete\+From@{delete\+From}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{delete\+From(\$entity)}{deleteFrom($entity)}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::delete\+From (
+\begin{DoxyParamCaption}
+\item[{}]{\$entity}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_af16b3d263aedfcc26a7793cfc4a77d9a}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_af16b3d263aedfcc26a7793cfc4a77d9a}
+
+
+A basic way to delete some rows from a table. 
+
+This method adds \char`\"{}\+D\+E\+L\+E\+T\+E F\+R\+O\+M \$table\char`\"{} to the query. Use the following methods to filter the result, and execute the query. \index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!exec\+Query@{exec\+Query}}
+\index{exec\+Query@{exec\+Query}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{exec\+Query()}{execQuery()}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::exec\+Query (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_aca8acdbf7b61cbf3e46eda0a986237a6}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_aca8acdbf7b61cbf3e46eda0a986237a6}
+
+
+Executes the query. 
+
+This method is to be called in last. It executes the query created using the querybuilder or the \hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_ade8025723f568435b1da29de2eb2acaa}{set\+Query()} method and returns its result if possible. \index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!generate\+Query@{generate\+Query}}
+\index{generate\+Query@{generate\+Query}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{generate\+Query()}{generateQuery()}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::generate\+Query (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_a235fcd7a0a4a9b5d9c2e0c7cd67a692d}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_a235fcd7a0a4a9b5d9c2e0c7cd67a692d}
+
+
+Generates the query. 
+
+This method generates the query according to the methods you called on this instance of the query and stores it in \$this-\/$>$query. Remember to use the \hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_aca8acdbf7b61cbf3e46eda0a986237a6}{exec\+Query()} method. \index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!get\+Query@{get\+Query}}
+\index{get\+Query@{get\+Query}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{get\+Query(\$query)}{getQuery($query)}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::get\+Query (
+\begin{DoxyParamCaption}
+\item[{}]{\$query}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_a619795b0add32f39d067ea7aab3575f2}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_a619795b0add32f39d067ea7aab3575f2}
+
+
+Returns the query. 
+
+Use this method to get the query if you need it for anything. \index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!inner\+Join@{inner\+Join}}
+\index{inner\+Join@{inner\+Join}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{inner\+Join(\$entity)}{innerJoin($entity)}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::inner\+Join (
+\begin{DoxyParamCaption}
+\item[{}]{\$entity}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_a00f8f2b1018bc1f3f449e34abe1d12a4}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_a00f8f2b1018bc1f3f449e34abe1d12a4}
+
+
+Adds an inner join to your query between \$this-\/$>$entity, and the \$entity parameter of this method. 
+
+This method adds an inner join to the query. Use it to specify the joined entity as the parameter. Remember to use the on(\$expr) method. \index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!left\+Join@{left\+Join}}
+\index{left\+Join@{left\+Join}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{left\+Join(\$entity)}{leftJoin($entity)}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::left\+Join (
+\begin{DoxyParamCaption}
+\item[{}]{\$entity}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_acbaa126594294ef160748e1bdf9aa74b}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_acbaa126594294ef160748e1bdf9aa74b}
+
+
+Adds a left join to your query between \$this-\/$>$entity, and the \$entity parameter of this method. 
+
+This method adds a left join to the query. Use it to specify the joined entity as the parameter. Remember to use the on(\$expr) method. \index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!limit@{limit}}
+\index{limit@{limit}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{limit(\$limit, \$offset=null)}{limit($limit, $offset=null)}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::limit (
+\begin{DoxyParamCaption}
+\item[{}]{\$limit, }
+\item[{}]{\$offset = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_a3cd93d792e7e3d58d41e81c1d2ec740f}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_a3cd93d792e7e3d58d41e81c1d2ec740f}
+
+
+Limits the number of rows returned. 
+
+This method adds a limit to the query. You can use only the first parameter, or both. If you use only the first, only the \$limit first rows will be returned. If you use both, rows from \$limit to \$offset will be returned. \index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!on@{on}}
+\index{on@{on}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{on(\$expr)}{on($expr)}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::on (
+\begin{DoxyParamCaption}
+\item[{}]{\$expr}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_afda91cfd3a428392f444082b4a14cd88}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_afda91cfd3a428392f444082b4a14cd88}
+
+
+Specify the fields used in a join. 
+
+Use this method after a inner/left/right join to specify which fields should be compared. \index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!order\+By@{order\+By}}
+\index{order\+By@{order\+By}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{order\+By(\$column, \$asc=true)}{orderBy($column, $asc=true)}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::order\+By (
+\begin{DoxyParamCaption}
+\item[{}]{\$column, }
+\item[{}]{\$asc = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_a68517a42061ced70872c6de90c2dcd3f}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_a68517a42061ced70872c6de90c2dcd3f}
+
+
+Orders the rows returned by your query. 
+
+This method adds an O\+R\+D\+ER BY to the query. You can define which column and how (A\+S\+C/\+D\+E\+SC) the results must be sorted. If you omit the second parameter, it will be A\+SC. \index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!or\+Where@{or\+Where}}
+\index{or\+Where@{or\+Where}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{or\+Where(\$expr)}{orWhere($expr)}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::or\+Where (
+\begin{DoxyParamCaption}
+\item[{}]{\$expr}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_a90c6e6969ef52a27880a40486d1c9d3b}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_a90c6e6969ef52a27880a40486d1c9d3b}
+
+
+Adds a second \char`\"{}where\char`\"{} using an OR operator, with the condition as parameter. 
+
+This method adds \char`\"{}\+O\+R \$expr\char`\"{} to the query. Use it to specify a second or more filter to your query. Alternatively, you can use the \hyperlink{class_eiron_1_1_o_r_m_1_1_query_builder_ad75c121d7c9458f3c9d54b2967179060}{and\+Where()} method. \index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!right\+Join@{right\+Join}}
+\index{right\+Join@{right\+Join}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{right\+Join(\$entity)}{rightJoin($entity)}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::right\+Join (
+\begin{DoxyParamCaption}
+\item[{}]{\$entity}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_a791b13a237e96ea44655edc7f602faa1}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_a791b13a237e96ea44655edc7f602faa1}
+
+
+Adds a right join to your query between \$this-\/$>$entity, and the \$entity parameter of this method. 
+
+This method adds a right join to the query. Use it to specify the joined entity as the parameter. Remember to use the on(\$expr) method. \index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!select\+From@{select\+From}}
+\index{select\+From@{select\+From}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{select\+From(\$entity)}{selectFrom($entity)}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::select\+From (
+\begin{DoxyParamCaption}
+\item[{}]{\$entity}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_a645141629fc019777b639484a7c87e52}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_a645141629fc019777b639484a7c87e52}
+
+
+A basic way to select all the rows from a table. 
+
+This method adds \char`\"{}\+S\+E\+L\+E\+C\+T $\ast$ F\+R\+O\+M \$table\char`\"{} to the query. Use the following methods to filter the result, and execute the query. \index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!set\+Query@{set\+Query}}
+\index{set\+Query@{set\+Query}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{set\+Query(\$query)}{setQuery($query)}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::set\+Query (
+\begin{DoxyParamCaption}
+\item[{}]{\$query}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_ade8025723f568435b1da29de2eb2acaa}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_ade8025723f568435b1da29de2eb2acaa}
+
+
+Sets a My\+S\+QL query. 
+
+Use this method to set a custom My\+S\+QL query, if you don\textquotesingle{}t want or can\textquotesingle{}t use the querybuilder methods. \index{Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}!where@{where}}
+\index{where@{where}!Eiron\+::\+O\+R\+M\+::\+Query\+Builder@{Eiron\+::\+O\+R\+M\+::\+Query\+Builder}}
+\subsubsection[{\texorpdfstring{where(\$expr)}{where($expr)}}]{\setlength{\rightskip}{0pt plus 5cm}Eiron\textbackslash{}\+O\+R\+M\textbackslash{}\+Query\+Builder\+::where (
+\begin{DoxyParamCaption}
+\item[{}]{\$expr}
+\end{DoxyParamCaption}
+)}\hypertarget{class_eiron_1_1_o_r_m_1_1_query_builder_a2e1577915ea45bbf42572f7bba0b20f4}{}\label{class_eiron_1_1_o_r_m_1_1_query_builder_a2e1577915ea45bbf42572f7bba0b20f4}
+
+
+A \char`\"{}where\char`\"{} function, with the condition as parameter. 
+
+This method adds \char`\"{}\+W\+H\+E\+R\+E \$expr\char`\"{} to the query. You can specify more conditions using and\+Where(\$expr) and or\+Where(\$expr) methods. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+c\+:/wamp/www/framework/vendor/\+O\+R\+M/Query\+Builder.\+php\end{DoxyCompactItemize}

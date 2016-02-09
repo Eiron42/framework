@@ -1,0 +1,92 @@
+\hypertarget{table-generator_8php}{}\section{c\+:/wamp/www/framework/table-\/generator.php File Reference}
+\label{table-generator_8php}\index{c\+:/wamp/www/framework/table-\/generator.\+php@{c\+:/wamp/www/framework/table-\/generator.\+php}}
+
+
+Call this script to generate a new table, entity and repository.  
+
+
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$name} = trim(str\+\_\+replace(\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textquotesingle{}, strtolower(fgets(S\+T\+D\+IN))))\hypertarget{table-generator_8php_ab2fc40d43824ea3e1ce5d86dee0d763b}{}\label{table-generator_8php_ab2fc40d43824ea3e1ce5d86dee0d763b}
+
+\item 
+{\bfseries \$db} = Database\+::get\+Instance()\hypertarget{table-generator_8php_a1fa3127fc82f96b1436d871ef02be319}{}\label{table-generator_8php_a1fa3127fc82f96b1436d871ef02be319}
+
+\item 
+{\bfseries \$columns} = array()\hypertarget{table-generator_8php_a19d2a3d21fe02053311fde465e6ae2e9}{}\label{table-generator_8php_a19d2a3d21fe02053311fde465e6ae2e9}
+
+\item 
+{\bfseries \$column\+Types} = \mbox{[}\textquotesingle{}varchar\textquotesingle{}, \textquotesingle{}text\textquotesingle{}, \textquotesingle{}int\textquotesingle{}, \textquotesingle{}float\textquotesingle{}, \textquotesingle{}bool\textquotesingle{}, \textquotesingle{}date\textquotesingle{}, \textquotesingle{}datetime\textquotesingle{}\mbox{]}\hypertarget{table-generator_8php_a024b085abf9bc5e169be390075bdd754}{}\label{table-generator_8php_a024b085abf9bc5e169be390075bdd754}
+
+\item 
+{\bfseries do}
+\item 
+{\bfseries \$column\+Name} = trim(str\+\_\+replace(\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textquotesingle{}, strtolower(fgets(S\+T\+D\+IN))))\hypertarget{table-generator_8php_a891e1698a62c1a0452001186161b2316}{}\label{table-generator_8php_a891e1698a62c1a0452001186161b2316}
+
+\item 
+{\bfseries \$confirm} = trim(str\+\_\+replace(\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textquotesingle{}, fgets(S\+T\+D\+IN)))\hypertarget{table-generator_8php_a4dcadbee89ed4c8ead497ce14b67dd23}{}\label{table-generator_8php_a4dcadbee89ed4c8ead497ce14b67dd23}
+
+\item 
+if(\$confirm=== \textquotesingle{}Y\textquotesingle{}) {\bfseries else}
+\item 
+{\bfseries \$class\+Name} = ucfirst(\$name)\hypertarget{table-generator_8php_acd6a475a6eeb092f4eea3e19e502d67d}{}\label{table-generator_8php_acd6a475a6eeb092f4eea3e19e502d67d}
+
+\item 
+{\bfseries \$repo\+Name} = \$class\+Name . \textquotesingle{}Repository\textquotesingle{}\hypertarget{table-generator_8php_a10d32c8d09d7e0c815d4d4335d860285}{}\label{table-generator_8php_a10d32c8d09d7e0c815d4d4335d860285}
+
+\item 
+{\bfseries \$class} = fopen(\char`\"{}./model/Entity/\$class\+Name.\+php\char`\"{}, \textquotesingle{}x\textquotesingle{})\hypertarget{table-generator_8php_a252ba022809910ea710a068fc1bab657}{}\label{table-generator_8php_a252ba022809910ea710a068fc1bab657}
+
+\item 
+{\bfseries \$properties} = \textquotesingle{}\textquotesingle{}\hypertarget{table-generator_8php_a7f675de4b5983d7e84f6573b7d4d453d}{}\label{table-generator_8php_a7f675de4b5983d7e84f6573b7d4d453d}
+
+\item 
+{\bfseries \$methods} = \textquotesingle{}\textquotesingle{}\hypertarget{table-generator_8php_a802753499268a04da139bd6e6ef89b35}{}\label{table-generator_8php_a802753499268a04da139bd6e6ef89b35}
+
+\item 
+{\bfseries \$insert\+Columns} = \textquotesingle{}(\textquotesingle{}\hypertarget{table-generator_8php_a7aa7d5d1dd8a405aeb1673e4fc00b827}{}\label{table-generator_8php_a7aa7d5d1dd8a405aeb1673e4fc00b827}
+
+\item 
+{\bfseries \$insert\+Values} = \textquotesingle{}(\textquotesingle{}\hypertarget{table-generator_8php_a8af84c8ac6fb500f53a33a89f7fb2cc6}{}\label{table-generator_8php_a8af84c8ac6fb500f53a33a89f7fb2cc6}
+
+\item 
+{\bfseries \$update\+Values} = \textquotesingle{}\textquotesingle{}\hypertarget{table-generator_8php_a51215fd925a38c81c5fe6d15ccb48c5c}{}\label{table-generator_8php_a51215fd925a38c81c5fe6d15ccb48c5c}
+
+\item 
+{\bfseries \$columns\+Names} = \mbox{[}\textquotesingle{}id\textquotesingle{}\mbox{]}\hypertarget{table-generator_8php_a30cb304e4111c2f8268d0ac63e183947}{}\label{table-generator_8php_a30cb304e4111c2f8268d0ac63e183947}
+
+\item 
+{\bfseries \$class\+Content}\hypertarget{table-generator_8php_a44d64b8be6235c4e72646fc501e4cae9}{}\label{table-generator_8php_a44d64b8be6235c4e72646fc501e4cae9}
+
+\item 
+{\bfseries \$repository} = fopen(\char`\"{}./model/Repository/\$repo\+Name.\+php\char`\"{}, \textquotesingle{}x\textquotesingle{})\hypertarget{table-generator_8php_a116ab346146cc30fbffb7ffc52cbd1b3}{}\label{table-generator_8php_a116ab346146cc30fbffb7ffc52cbd1b3}
+
+\item 
+{\bfseries \$repository\+Content}\hypertarget{table-generator_8php_a7aa649b47af5da9621ae62712bcc4089}{}\label{table-generator_8php_a7aa649b47af5da9621ae62712bcc4089}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Call this script to generate a new table, entity and repository. 
+
+Use \char`\"{}php table-\/generator.\+php\char`\"{} to start the table creation. You will have to provide some informations such as the table name, and the name and type of fields. It will also create the entity and repository classes in the /model directory. 
+
+\subsection{Variable Documentation}
+\index{table-\/generator.\+php@{table-\/generator.\+php}!do@{do}}
+\index{do@{do}!table-\/generator.\+php@{table-\/generator.\+php}}
+\subsubsection[{\texorpdfstring{do}{do}}]{\setlength{\rightskip}{0pt plus 5cm}do}\hypertarget{table-generator_8php_a721c6ff80a6d3e4ad4ffa52a04c60085}{}\label{table-generator_8php_a721c6ff80a6d3e4ad4ffa52a04c60085}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    echo \textcolor{stringliteral}{"\(\backslash\)nEnter a column name (or press Enter to stop adding columns): "}
+\end{DoxyCode}
+\index{table-\/generator.\+php@{table-\/generator.\+php}!else@{else}}
+\index{else@{else}!table-\/generator.\+php@{table-\/generator.\+php}}
+\subsubsection[{\texorpdfstring{else}{else}}]{\setlength{\rightskip}{0pt plus 5cm}if (\$confirm=== \textquotesingle{}Y\textquotesingle{}) else}\hypertarget{table-generator_8php_a29dec57ce2935f1ff5bbb96ea50aec2d}{}\label{table-generator_8php_a29dec57ce2935f1ff5bbb96ea50aec2d}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    exit(\textcolor{stringliteral}{"Table creation aborted."})
+\end{DoxyCode}
