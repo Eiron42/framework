@@ -4,6 +4,7 @@ echo "\nYou are trying to generate a new block.\n\n";
 echo "Block name (should be camelCase and end with 'Block') : ";
 
 $name = trim(str_replace(' ', '', fgets(STDIN)));
+$controllerName = $name . 'Controller';
 
 if (mkdir(__DIR__ . '/src/' . $name, 0774, true)) {
     mkdir(__DIR__ . '/src/' . $name . '/controllers', 0774, true);
@@ -17,7 +18,7 @@ namespace Eiron\\$name\\controllers;
 
 use Eiron\\framework\\controllers\\baseController;
 
-class $name\Controller extends baseController {
+class $controllerName extends baseController {
 
     public function __construct() {
         \$this->directory = __DIR__;
