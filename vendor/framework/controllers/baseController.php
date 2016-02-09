@@ -2,8 +2,6 @@
 
 namespace Eiron\framework\controllers;
 
-//use Twig_\Twig\Loader\Twig_Loader_Filesystem;
-
 /** \brief A class extended by all controllers with all generic methods.
 *
 * This class gathers all the generic methods used by all the blocks controllers. All block controllers are supposed to extend this class.
