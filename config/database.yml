@@ -1,0 +1,5 @@
+# Contains all the database informations used by the Database class.
+host: localhost
+dbname: framework
+login: root
+password: 

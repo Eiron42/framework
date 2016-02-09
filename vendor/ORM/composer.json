@@ -1,0 +1,7 @@
+{
+    "name": "eiron/orm",
+    "description": "A basic ORM",
+    "autoload": {
+        "psr-4": { "Eiron\\ORM\\": "" }
+    }
+}
