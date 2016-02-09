@@ -1,5 +1,18 @@
 <?php
 
+ini_set('error_reporting', E_ALL);
+error_reporting(E_ALL);
+ini_set('log_errors',TRUE);
+ini_set('html_errors',FALSE);
+ini_set('error_log', __DIR__ . '/logs/error.log');
+//ini_set('display_errors',FALSE);
+
+$request = print_r($_REQUEST, true);
+$access = fopen(__DIR__ . '/logs/access.log', 'a');
+$date = date('Y-m-d H:i:s');
+fwrite($access, "[$date] " . $_SERVER['REQUEST_URI'] . ' : ' . $request);
+fclose($access);
+
 // Composer autoload
 require __DIR__ . '/vendor/autoload.php';
 
