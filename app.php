@@ -1,5 +1,8 @@
 <?php
 
+// Composer autoload
+require __DIR__ . '/vendor/autoload.php';
+
 use Symfony\Component\Yaml\Yaml;
 
 $path = $_SERVER['PATH_INFO'];
