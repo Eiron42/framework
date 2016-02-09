@@ -1,0 +1,11 @@
+{
+    "name": "eiron/framework",
+    "require": {
+    },
+    "authors": [
+        {
+            "name": "Eiron",
+            "email": "clement@strax.io"
+        }
+    ]
+}
