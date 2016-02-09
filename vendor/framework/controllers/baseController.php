@@ -14,7 +14,7 @@ class baseController {
     *
     * This method returns the template named $templateName, using the $params array to set the template variables, using TWIG. To display the template, echo the value returned by this method.
     */
-    public function render($templateName, array $params) {
+    public function render($templateName, array $params = []) {
         $loader = new \Twig_Loader_Filesystem($this->directory . '/../views/');
         $twig = new \Twig_Environment($loader, array(
             'cache' => '/cache/templates/',

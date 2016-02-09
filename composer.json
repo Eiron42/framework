@@ -9,5 +9,13 @@
             "name": "Eiron",
             "email": "clement@strax.io"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+                    "Eiron\\": "src/",
+                    "ORM\\Model\\":"model/",
+                    "Eiron\\framework\\":"vendor/framework/",
+                    "Eiron\\ORM\\":"vendor/ORM/"
+                 }
+    }
 }

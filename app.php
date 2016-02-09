@@ -18,7 +18,9 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Symfony\Component\Yaml\Yaml;
 
-$path = $_SERVER['PATH_INFO'];
+$path = (isset($_SERVER['PATH_INFO'])) ? $_SERVER['PATH_INFO'] : '/';
+$path = (substr($path, -1) === '/') ? substr($path, 0, -1) : $path;
+
 $currentBlock = null;
 $currentRoute = null;
 
@@ -29,6 +31,7 @@ foreach ($globalRouting['blocksRouting'] as $block => $prefix) {
     $blockRoutes = Yaml::parse(file_get_contents(__DIR__ . '/src/' . $block . '/routing.yml'));
     foreach ($blockRoutes as $route => $data) {
         $data['path'] = $prefix . $data['path'];
+        $data['path'] = (substr($data['path'], -1) === '/') ? substr($data['path'], 0, -1) : $data['path'];
         $blockRoutes[$route] = $data;
         if ($path === $data['path']) {
             $currentBlock = $block;
@@ -36,9 +39,14 @@ foreach ($globalRouting['blocksRouting'] as $block => $prefix) {
             break;
         }
     }
-    if ($currentRoute === null) {
-        $currentRoute = 404;
-    }
+}
+if ($currentRoute === null) {
+    $currentRoute = 404;
+    echo '404 not found';
+} else {
+    $controller = 'Eiron\\' . $currentBlock . '\controllers\\' . $currentBlock . 'Controller';
+    $controller = new $controller();
+    $controller = $controller->$currentRoute['controller'](); 
 }
 
-var_dump($currentRoute);
+//var_dump($currentRoute);
