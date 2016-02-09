@@ -1,0 +1,9 @@
+# Array of global routes
+# route_name : /path
+#routing : 
+#    a_first_route : 
+#        path : /a/first/route
+
+# Array of included routes
+# blockName : prefix of the block's paths
+blocksRouting :

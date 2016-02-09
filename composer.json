@@ -1,6 +1,7 @@
 {
     "name": "eiron/framework",
     "require": {
+        "symfony/yaml": "^3.0"
     },
     "authors": [
         {
