@@ -1,5 +1,6 @@
 /vendor
 /logs
-/model
-/src
 composer.lock
+
+!/vendor/framework
+!/vendor/orm

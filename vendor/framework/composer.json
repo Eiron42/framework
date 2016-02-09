@@ -1,0 +1,7 @@
+{
+    "name": "eiron/framework",
+    "description": "A basic PHP framework",
+    "autoload": {
+        "psr-4": { "Eiron\\framework\\": "" }
+    }
+}

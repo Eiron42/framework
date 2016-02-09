@@ -1,0 +1,3 @@
+test_homepage:
+    path: /
+    controller : testHomepageController

@@ -7,3 +7,4 @@
 # Array of included routes
 # blockName : prefix of the block's paths
 blocksRouting :
+    sampleBlock : /
