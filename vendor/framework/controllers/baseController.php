@@ -17,7 +17,7 @@ class baseController {
     public function render($templateName, array $params = []) {
         $loader = new \Twig_Loader_Filesystem($this->directory . '/../views/');
         $twig = new \Twig_Environment($loader, array(
-            'cache' => '/cache/templates/',
+            'cache' => __DIR__ . '/../../../cache/templates/',
         ));
         
         return $twig->render($templateName, $params);
