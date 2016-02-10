@@ -1,2 +1,6 @@
-# RewriteEngine On
-# RewriteRule . /app.php
+<ifModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-f [OR]
+    RewriteCond %{REQUEST_FILENAME} !/public/ [NC]
+    RewriteRule ^(.*)$ app.php [L]
+</ifModule>

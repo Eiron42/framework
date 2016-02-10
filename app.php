@@ -1,5 +1,4 @@
 <?php
-
 ini_set('error_reporting', E_ALL);
 error_reporting(E_ALL);
 ini_set('log_errors',TRUE);
@@ -18,7 +17,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Symfony\Component\Yaml\Yaml;
 
-$path = (isset($_SERVER['PATH_INFO'])) ? $_SERVER['PATH_INFO'] : '/';
+$path = (isset($_SERVER['REQUEST_URI'])) ? $_SERVER['REQUEST_URI'] : '/';
 $path = (substr($path, -1) === '/') ? substr($path, 0, -1) : $path;
 
 $currentBlock = null;
