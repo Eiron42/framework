@@ -38,7 +38,7 @@ class $controllerName extends baseController {
 }
 
 $routing = Yaml::parse(file_get_contents(__DIR__ . '/config/routing.yml'));
-$routing[$name] = '~';
+$routing['blocksRouting'][$name] = null;
 $routing = Yaml::dump($routing, 2);
 file_put_contents(__DIR__ . '/config/routing.yml', $routing);
 
