@@ -6,6 +6,8 @@ ini_set('html_errors',FALSE);
 ini_set('error_log', __DIR__ . '/logs/error.log');
 //ini_set('display_errors',FALSE);
 
+session_start();
+
 $request = print_r($_REQUEST, true);
 $access = fopen(__DIR__ . '/logs/access.log', 'a');
 $date = date('Y-m-d H:i:s');
