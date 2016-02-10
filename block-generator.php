@@ -1,5 +1,10 @@
 <?php
 
+// Composer autoload
+require __DIR__ . '/vendor/autoload.php';
+
+use Symfony\Component\Yaml\Yaml;
+
 echo "\nYou are trying to generate a new block.\n\n";
 echo "Block name (should be camelCase and end with 'Block') : ";
 
@@ -31,6 +36,11 @@ class $controllerName extends baseController {
 } else {
     echo "\n\nThis block already exists.";
 }
+
+$routing = Yaml::parse(file_get_contents(__DIR__ . '/config/routing.yml'));
+$routing[$name] = '~';
+$routing = Yaml::dump($routing, 2);
+file_put_contents(__DIR__ . '/config/routing.yml', $routing);
 
 /*! \file block-generator.php
     \brief Call this script to generate a new block.
